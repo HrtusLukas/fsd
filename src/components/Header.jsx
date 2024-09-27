@@ -49,7 +49,7 @@ const Header = ({ theme, toggleTheme }) => {
   return (
     <section>
       {!isMobile ? (
-        <div className="navBar h-[100px] w-[96.5vw] border-b-[0.5px] border-b-primary bg-background flex justify-between items-center mx-[20px] m-auto box-border fixed z-50">
+        <div  className="navBar h-[100px] w-[96.5vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-between items-center mx-[20px] m-auto box-border fixed z-50">
           <div className="h-[100%]">
             <ul className="flex space-x-4 h-[100%]">
               <li
@@ -152,7 +152,7 @@ const Header = ({ theme, toggleTheme }) => {
           </div>
         </div>
       ) : (
-        <div className="navBar h-[100px] w-[100vw] border-b-[0.5px] border-b-primary bg-background flex justify-center items-center box-border fixed z-50">
+        <div className="navBar h-[100px] w-[100vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-center items-center box-border fixed z-50">
           <div className="relative w-full flex justify-between items-center px-4">
             
             
@@ -184,7 +184,7 @@ const Header = ({ theme, toggleTheme }) => {
             </button>
             
             {menuOpen && (
-              <div className="absolute top-[90px] left-0 w-full bg-background border-t-[0.5px] border-t-primary">
+              <div className="absolute top-[90px] left-0 w-full bg-gradient-to-r from-background to-footer border-t-[0.5px] border-t-primary">
                 <ul className="flex flex-col items-center py-2">
                 <li id="1"  onClick={() => toggleVisibleId(1)} className="py-2 ">
                   <div className="flex items-center">

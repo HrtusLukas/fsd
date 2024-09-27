@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,6 +14,9 @@ module.exports = {
         border: "rgb(var(--border))",
         footer: "rgb(var(--footer))"
       },
+      fontFamily: {
+        "poppins": ['Poppins']
+      }
     },
   },
   plugins: [],

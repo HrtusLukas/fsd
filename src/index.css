@@ -4,11 +4,11 @@
 @import-normalize;
 
 .light {
-  --background: 194, 201, 207;
+  --background:  235, 245, 255;
   --border: 65, 116, 245;
-  --primary: 0, 0, 0;
-  --secondary: 255, 153, 0;
-  --footer: 255, 201, 111
+  --primary: 25, 42, 86;
+  --secondary: 202, 244, 255;
+  --footer: 160, 222, 255
 }
 
 .dark {

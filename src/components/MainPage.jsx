@@ -3,6 +3,7 @@ import mainImage from "../images/mainImage.jpg";
 import Image from "../images/mainImage.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { linearGradient } from "framer-motion/client";
 
 const MainPage = () => {
   const [displayText, setDisplayText] = useState("");
@@ -36,23 +37,20 @@ const MainPage = () => {
         
         <div className="w-full lg:w-[50%] flex flex-col items-center justify-center text-center lg:text-left mb-10 lg:mb-0">
           <div>
-            <h1 className="text-primary text-5xl md:text-6xl lg:text-7xl">
+            
+            <h1 className="text-primary   text-5xl md:text-6xl lg:text-[85px]">
+             
               {displayText.slice(0, 8)} 
+           
             </h1>
           </div>
           <div className="pb-[8%]">
-            <h2 className="text-primary text-3xl md:text-4xl">
+            <h2 className="text-primary text-3xl lg:text-5xl md:text-4xl">
               {displayText.slice(8)} 
             </h2>
           </div>
           
-          <div className="hidden lg:block w-[60%] md:w-[40%] lg:w-[20%]">
-            <Link to="/references">
-              <button className="bg-secondary w-full h-[55px] rounded-[15px] hover:text-white hover:scale-[1.1] transition-all">
-                References
-              </button>
-            </Link>
-          </div>
+          
         </div>
 
         

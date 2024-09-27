@@ -38,16 +38,7 @@ const AboutUsMainPage = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          className="w-[50%] hidden lg:flex sm:w-[30%] md:w-[20%] lg:w-[15%]"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
-        >
-          <button className="bg-secondary w-full h-[55px] rounded-[15px] hover:text-white hover:scale-[1.1] transition-transform">
-            Pridaj sa k nám
-          </button>
-        </motion.div>
+     
       </div>
     </section>
   );

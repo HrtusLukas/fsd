@@ -36,7 +36,7 @@ const App = () => {
 
  
   return (
-    <div className={`${theme} bg-background overflow-hidden`}>
+    <div className={`${theme} font-poppins bg-gradient-to-r from-background to-footer overflow-hidden`}>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
