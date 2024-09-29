@@ -10,6 +10,8 @@ const ShowedSystems = () => {
     setIsMobile(window.innerWidth < 768);
   };
 
+
+
   useEffect(() => {
     // Initial check
     checkScreenSize();
@@ -47,7 +49,7 @@ const ShowedSystems = () => {
 
         <div className="flex flex-wrap justify-center gap-x-[30px] gap-y-[30px] h-auto w-[100%]">
           {systemdata.map((oneSystem) => {
-            const { id, image, header, text, button } = oneSystem;
+            const { id, image, header, text} = oneSystem;
             return (
               <motion.div
                 ref={ref}
@@ -61,7 +63,7 @@ const ShowedSystems = () => {
                       }
                 }
                 key={id}
-                className="w-[90%] sm:w-[45%] sm:h-[70vh] lg:w-[400px] flex flex-col rounded-[30px] py-[30px] px-[25px] lg:py-[40px] lg:px-[45px] text-center h-auto lg:h-[470px] bg-secondary hover:border-[1px] hover:border-primary transition-all"
+                className="w-[90%] sm:w-[45%] sm:h-[70vh] lg:w-[400px] flex flex-col rounded-[30px] py-[30px] px-[25px] lg:py-[40px] lg:px-[55px] text-center h-auto lg:h-[470px] bg-secondary hover:border-[1px] hover:border-primary transition-all "
               >
                 <div className="mb-[20px] lg:mb-[30px]">
                   <img src={image} alt={header} className="w-[60px] lg:w-[70px] mx-auto" />
@@ -74,12 +76,10 @@ const ShowedSystems = () => {
                     {text}
                   </p>
                 </div>
-                <div className="hidden lg:flex items-end">
-                  <a className="relative text-primary shrink-border cursor-pointer">
-                    {button}
-                  </a>
-                </div>
+ 
+                
               </motion.div>
+              
             );
           })}
         </div>

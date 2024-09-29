@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 const AboutUs = () => {
   return (
-    <div className="lg:w-[96.5vw] lg:h-[80vh] sm:h-auto sm:w-full bg-transparent lg:ml-4 sm:ml-0 flex flex-col lg:flex-row">
+    <div className="lg:w-[96.5vw] lg:h-[90vh] sm:h-auto sm:w-full bg-transparent lg:ml-4 sm:ml-0 flex flex-col lg:flex-row">
       <div className="flex flex-col w-full lg:w-[50%] px-4 lg:pl-[75px] lg:pr-[20px]">
         <div className="text-primary">
           <div className="text-3xl mb-2 lg:mb-4">
@@ -37,7 +37,7 @@ const AboutUs = () => {
           <img src={react} className="w-[80px] sm:w-[120px] lg:w-[110px] h-auto" alt="React logo" />
         </div>
 
-        <div className="hover:text-white hover:scale-110 cursor-pointer bg-secondary w-[150px] sm:w-[170px] h-[45px] sm:h-[55px] rounded-[15px] hidden lg:flex justify-center items-center mx-auto lg:mx-0">
+        <div className="hover:text-white hover:scale-110 cursor-pointer bg-footer w-[150px] sm:w-[170px] h-[45px] sm:h-[55px] rounded-[15px] hidden lg:flex justify-center items-center mx-auto lg:mx-0">
           <Link to="aboutus">
             <button>More About Us</button>
           </Link>

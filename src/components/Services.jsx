@@ -4,7 +4,7 @@ import service from '../data';
 
 const Services = () => {
   return (
-    <div className="lg:w-[1200px] h-auto w-[100vw] lg:h-[300px] bg-transparent lg:bg-secondary translate-y-[1%] lg:border-[0.5px] lg:fixed border-primary border-solid flex flex-col lg:flex-row lg:rounded-[20px] 
+    <div className="lg:w-[1200px] h-auto w-[100vw] lg:h-[300px] bg-transparent lg:bg-secondary translate-y-[1%] lg:border-[0.5px] lg:fixed border-transparent border-solid flex flex-col lg:flex-row lg:rounded-[20px] 
     lg:overflow-visible overflow-y-auto max-h-[78vh]">
 
       {service.map((oneService) => {
@@ -20,7 +20,7 @@ const Services = () => {
             <div className="flex flex-col">
               <Link
                 to={route1}
-                className="text-primary text-[17px] mb-1 border-b-[0.5px] border-primary hover:font-[500] hover:border-background hover:border-b-[1px]"
+                className="text-primary text-[17px] mb-1 border-b-[0.5px] border-primary hover:font-[500] hover:border-footer hover:border-b-[1px]"
               >
                 {service1}
               </Link>

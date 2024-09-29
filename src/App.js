@@ -21,6 +21,7 @@ import Prestashop from "./components/Prestashop";
 import WebApp from "./components/WebApp";
 import Android from "./components/Android";
 import Website from "./components/Website";
+import Login from "./components/Login";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -71,6 +72,15 @@ const App = () => {
             path="/register"
             element={
               <Register
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Login
                 theme={theme}
                 toggleTheme={toggleTheme}
               />

@@ -51,7 +51,12 @@ const Header = ({ theme, toggleTheme }) => {
       {!isMobile ? (
         <div  className="navBar h-[100px] w-[96.5vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-between items-center mx-[20px] m-auto box-border fixed z-50">
           <div className="h-[100%]">
-            <ul className="flex space-x-4 h-[100%]">
+            <ul className="flex space-x-4 h-[100%] mr-[10px]">
+            <li className="h-[100%] hover:border-b-secondary hover:border-b-[3px]">
+                <Link to="/" className="opacity-50 hover:opacity-100 flex items-center h-[100%] text-primary text-xl">
+                  Home
+                </Link>
+              </li>
               <li
                 className="h-[100%] hover:border-b-secondary hover:border-b-[3px]"
                 onMouseOver={handleServicesOver}
@@ -69,23 +74,7 @@ const Header = ({ theme, toggleTheme }) => {
                   </div>
                 )}
               </li>
-              <li
-                className="h-[100%] hover:border-b-secondary hover:border-b-[3px]"
-                onMouseOver={handleSolutionsOver}
-                onMouseOut={handleSolutionsOut}
-              >
-                <p className="opacity-50 hover:opacity-100 flex items-center h-[100%] text-primary text-xl">
-                  Solutions
-                </p>
-                {solutionHover && (
-                  <div
-                    onMouseOver={handleSolutionsOver}
-                    onMouseOut={handleSolutionsOut}
-                  >
-                    <Solutions />
-                  </div>
-                )}
-              </li>
+              
               <li className="h-[100%] hover:border-b-secondary hover:border-b-[3px]">
                 <Link to="/aboutus" className="opacity-50 hover:opacity-100 flex items-center h-[100%] text-primary text-xl">
                   About Us
@@ -198,17 +187,7 @@ const Header = ({ theme, toggleTheme }) => {
                      : <></>}
                     
                   </li>
-                  <li id="2" onClick={() => toggleVisibleId(2)} className="py-2 ">
-                    <div className="flex items-center">
-                    <p className="text-primary text-xl">
-                      Solutions
-                    </p>
-                    {theme === "light" ? <MdKeyboardArrowDown size={20}  className="absolute right-3 "/> : <MdKeyboardArrowDown color="white" size={20}  className="absolute right-3 "/> }
-                    </div>
-                    {visibleId === 2  ? 
-                    <Solutions />
-                    : <></>}
-                  </li>
+                  
 
                   
                 <li className="py-2">

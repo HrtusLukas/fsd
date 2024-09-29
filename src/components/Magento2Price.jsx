@@ -9,7 +9,7 @@ const PrestashopPrice = () => {
 
           return (
             <div className="flex flex-1 h-[100%] justify-center flex-col items-start px-[5%] md:px-[1%] gap-y-2 mb-2 md:mb-0" key={id}>
-              <h1 className="text-primary text-3xl md:text-5xl">{header}</h1>
+              <h1 className="text-primary text-3xl md:text-[42px]">{header}</h1>
               <p className="text-primary text-lg md:text-xl">{text}</p>
             </div>
           );

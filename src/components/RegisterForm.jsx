@@ -32,7 +32,7 @@ const RegisterForm = () => {
         
 
         <div className="flex justify-center items-center flex-row">
-          <p>Already have an account? <Link to="/" className="text-blue-400" href="#">Sign in</Link>.</p>
+          <p>Already have an account? <Link to="/login" className="text-blue-400" href="#">Sign in</Link>.</p>
         </div>
         </div>
       </motion.form>

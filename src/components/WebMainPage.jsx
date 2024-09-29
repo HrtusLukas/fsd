@@ -9,7 +9,7 @@ const WebMainPage = () => {
             <p className="text-lg lg:text-xl">Programovanie na mieru</p>
           </div>
           <div className="my-4">
-            <h1 className="text-4xl lg:text-6xl">Vývoj webových aplikácií</h1>
+            <h1 className="text-4xl lg:text-5xl">Vývoj webových aplikácií</h1>
           </div>
           <div className="w-[100%] mb-3">
             <p className="text-[18px] lg:text-[22px] mb-4">

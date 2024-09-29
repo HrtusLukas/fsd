@@ -52,7 +52,7 @@ const Financing = () => {
                     }
               }
               key={id}
-              className="w-[90%] sm:w-[45%] lg:w-[420px] flex flex-col rounded-[30px] py-[40px] px-[45px] text-center h-auto lg:h-[520px] bg-secondary border-[1px] border-transparent hover:border-primary transition-all"
+              className="w-[90%] sm:w-[45%] lg:w-[420px] flex flex-col rounded-[30px] py-[40px] px-[45px] text-center h-auto lg:h-[545px] bg-secondary border-[1px] border-transparent hover:border-primary transition-all"
             >
               <div className="mb-[30px]">
                 <img src={image} alt="" />

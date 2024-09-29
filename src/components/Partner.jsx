@@ -28,7 +28,7 @@ const Partner = () => {
           <p className="text-center">Už s nami spolupracujete?</p>
         </div>
         <div className="flex justify-center text-3xl font-[500] text-primary">
-          <p className="flex relative shrink-border hover:text-secondary cursor-pointer">info@fsd.com</p>
+          <p  className="flex relative shrink-border hover:text-secondary cursor-pointer ">info@fsd.com</p>
         </div>
       </div>
     </section>
