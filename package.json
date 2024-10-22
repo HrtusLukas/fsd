@@ -16,10 +16,12 @@
     "react-native-linear-gradient": "^2.8.3",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
+    "react-select": "^5.8.1",
     "react-simple-chatbot": "^0.6.1",
     "react-switch": "^7.0.0",
     "sort-by": "^1.2.0",
     "swiper": "^11.1.14",
+    "swr": "^2.2.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

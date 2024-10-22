@@ -96,7 +96,7 @@ const App = () => {
             }
           />
           <Route
-            path="/magento-2-e-shop"
+            path="/blazor"
             element={
               <Magento2
                 theme={theme}
@@ -105,7 +105,7 @@ const App = () => {
             }
           />
           <Route
-            path="/prestashop-e-shop"
+            path="/react"
             element={
               <Prestashop
                 theme={theme}

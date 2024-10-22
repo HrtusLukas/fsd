@@ -7,10 +7,10 @@ const service = [
     id: 1,
     name: "E-shopy",
     image: image1,
-    service1: "Magento 2 e-shop",
-    service2: "Prestashop e-shop",
-    route1: "/magento-2-e-shop",  
-    route2: "/prestashop-e-shop"  
+    service1: "ASP.NET Blazor",
+    service2: "React",
+    route1: "/blazor",  
+    route2: "/react"  
   },
   {
     id: 2,

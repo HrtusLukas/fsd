@@ -4,6 +4,7 @@ import Image from "../images/mainImage.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { linearGradient } from "framer-motion/client";
+import Fetch from "./Fetch";
 
 const MainPage = () => {
   const [displayText, setDisplayText] = useState("");
@@ -13,6 +14,8 @@ const MainPage = () => {
   useEffect(() => {
     let idLetter = 0;
     let printer;
+
+    
 
     function printText() {
       if (idLetter <= fullText.length) {
@@ -65,6 +68,7 @@ const MainPage = () => {
           />
         </div>
       </div>
+      
     </section>
   );
 };

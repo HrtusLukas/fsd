@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import image from "../images/magento-2-eshop.png.webp";
+import image2 from "../images/Blazor.png"
 
 const Magento2MainPage = () => {
   return (
@@ -10,7 +11,7 @@ const Magento2MainPage = () => {
             <p className="text-lg lg:text-xl">Ecommerce platformy</p>
           </div>
           <div className="my-4">
-            <h1 className="text-4xl lg:text-5xl">Magento 2 e-shop</h1>
+            <h1 className="text-4xl lg:text-5xl">ASP.NET Blazor</h1>
           </div>
           <div className="w-[100%] mb-3">
             <p className="text-[18px] lg:text-[22px] mb-4">
@@ -29,8 +30,8 @@ const Magento2MainPage = () => {
           initial={{ x: "200vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 30, duration: 1.2 }} 
-          className="w-[100%] lg:w-[50%] mt-8 lg:mt-0">
-          <img className="p-[5%]" src={image} />
+          className="w-[100%] lg:w-[50%] mt-8 lg:mt-0 flex justify-center">
+          <img className="p-[5%] lg:w-[90%]" src={image2} />
         </motion.div>
       </section>
     </>

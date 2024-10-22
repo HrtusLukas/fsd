@@ -3,7 +3,7 @@ import { MdSunny } from "react-icons/md";
 import { LuMoon } from "react-icons/lu";
 import logoDark from "../images/Black_White_Minimalist_Modern_Initial_Name_M_D_Logo__1_-removebg-preview.png";
 import logoLight from "../images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Services from "./Services";
 import Solutions from "./Solutions";
 import { MdAccountCircle } from "react-icons/md";
@@ -21,38 +21,49 @@ const Header = ({ theme, toggleTheme }) => {
   };
 
   useEffect(() => {
-    // Initial check
     checkScreenSize();
-
-    // Add event listener for screen resize
     window.addEventListener("resize", checkScreenSize);
-
-    // Cleanup event listener
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   const [serviceHover, setServiceHover] = useState(false);
-  const [solutionHover, setSolutionHover] = useState(false);
+  //const [solutionHover, setSolutionHover] = useState(false);
 
   const handleServicesOver = () => setServiceHover(true);
   const handleServicesOut = () => setServiceHover(false);
 
-  const handleSolutionsOver = () => setSolutionHover(true);
-  const handleSolutionsOut = () => setSolutionHover(false);
+  // const handleSolutionsOver = () => setSolutionHover(true);
+  // const handleSolutionsOut = () => setSolutionHover(false);
 
   const [visibleId, setVisibleId] = useState(null);
 
   const toggleVisibleId = (id) => {
     setVisibleId((prevId) => (prevId === id ? null : id));
   };
- 
+
+  const navigate = useNavigate();
+
+  
+  useEffect(() => {
+    localStorage.removeItem('isLoggedIn');
+  }, []); 
+
+  const handleRegistrationClick = () => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+      navigate('/account');
+    } else {
+      navigate('/register');
+    }
+  };
+
   return (
     <section>
       {!isMobile ? (
-        <div  className="navBar h-[100px] w-[96.5vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-between items-center mx-[20px] m-auto box-border fixed z-50">
+        <div className="navBar h-[100px] w-[96.5vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-between items-center mx-[20px] m-auto box-border fixed z-50">
           <div className="h-[100%]">
             <ul className="flex space-x-4 h-[100%] mr-[10px]">
-            <li className="h-[100%] hover:border-b-secondary hover:border-b-[3px]">
+              <li className="h-[100%] hover:border-b-secondary hover:border-b-[3px]">
                 <Link to="/" className="opacity-50 hover:opacity-100 flex items-center h-[100%] text-primary text-xl">
                   Home
                 </Link>
@@ -66,15 +77,11 @@ const Header = ({ theme, toggleTheme }) => {
                   Services
                 </p>
                 {serviceHover && (
-                  <div
-                    onMouseOver={handleServicesOver}
-                    onMouseOut={handleServicesOut}
-                  >
+                  <div onMouseOver={handleServicesOver} onMouseOut={handleServicesOut}>
                     <Services />
                   </div>
                 )}
               </li>
-              
               <li className="h-[100%] hover:border-b-secondary hover:border-b-[3px]">
                 <Link to="/aboutus" className="opacity-50 hover:opacity-100 flex items-center h-[100%] text-primary text-xl">
                   About Us
@@ -87,17 +94,9 @@ const Header = ({ theme, toggleTheme }) => {
             <nav>
               <Link to="/" className="justify-center">
                 {theme === "light" ? (
-                  <img
-                    src={logoLight}
-                    alt="Company Logo"
-                    className="h-[120px] w-[120px]"
-                  />
+                  <img src={logoLight} alt="Company Logo" className="h-[120px] w-[120px]" />
                 ) : (
-                  <img
-                    src={logoDark}
-                    alt="Company Logo"
-                    className="h-[120px] w-[120px]"
-                  />
+                  <img src={logoDark} alt="Company Logo" className="h-[120px] w-[120px]" />
                 )}
               </Link>
             </nav>
@@ -109,11 +108,7 @@ const Header = ({ theme, toggleTheme }) => {
                 <li>
                   <div className="flex justify-center">
                     <button onClick={toggleTheme}>
-                      {theme === "light" ? (
-                        <MdSunny size={20} />
-                      ) : (
-                        <LuMoon color="white" size={20} />
-                      )}
+                      {theme === "light" ? <MdSunny size={20} /> : <LuMoon color="white" size={20} />}
                     </button>
                   </div>
                 </li>
@@ -128,13 +123,9 @@ const Header = ({ theme, toggleTheme }) => {
                   </Link>
                 </li>
                 <li className="h-[100%] flex items-center cursor-pointer">
-                  <Link to="/register">
-                    {theme === "light" ? (
-                      <MdAccountCircle size={30} />
-                    ) : (
-                      <MdAccountCircle color="white" size={30} />
-                    )}
-                  </Link>
+                  <a onClick={handleRegistrationClick}> {/* Fix the onClick */}
+                    {theme === "light" ? <MdAccountCircle size={30} /> : <MdAccountCircle color="white" size={30} />}
+                  </a>
                 </li>
               </ul>
             </nav>
@@ -143,54 +134,33 @@ const Header = ({ theme, toggleTheme }) => {
       ) : (
         <div className="navBar h-[100px] w-[100vw] border-b-[0.5px] border-b-primary bg-gradient-to-r from-background to-footer flex justify-center items-center box-border fixed z-50">
           <div className="relative w-full flex justify-between items-center px-4">
-            
-            
-            
             <Link to="/" className="flex justify-center">
               {theme === "light" ? (
-                <img
-                  src={logoLight}
-                  alt="Company Logo"
-                  className="h-[90px] w-[90px]"
-                />
+                <img src={logoLight} alt="Company Logo" className="h-[90px] w-[90px]" />
               ) : (
-                <img
-                  src={logoDark}
-                  alt="Company Logo"
-                  className="h-[90px] w-[90px]"
-                />
+                <img src={logoDark} alt="Company Logo" className="h-[90px] w-[90px]" />
               )}
             </Link>
 
-            <button
-              className="flex items-center"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <BsThreeDots
-                size={35}
-                color={theme === "light" ? "black" : "white"}
-              />
+            <button className="flex items-center" onClick={() => setMenuOpen(!menuOpen)}>
+              <BsThreeDots size={35} color={theme === "light" ? "black" : "white"} />
             </button>
-            
+
             {menuOpen && (
               <div className="absolute top-[90px] left-0 w-full bg-gradient-to-r from-background to-footer border-t-[0.5px] border-t-primary">
                 <ul className="flex flex-col items-center py-2">
-                <li id="1"  onClick={() => toggleVisibleId(1)} className="py-2 ">
-                  <div className="flex items-center">
-                    <p className="text-primary text-xl ">
-                      Services
-                    </p>
-                    {theme === "light" ? <MdKeyboardArrowDown size={20}  className="absolute right-3 "/> : <MdKeyboardArrowDown color="white" size={20}  className="absolute right-3 "/> } 
+                  <li id="1" onClick={() => toggleVisibleId(1)} className="py-2 ">
+                    <div className="flex items-center">
+                      <p className="text-primary text-xl ">Services</p>
+                      {theme === "light" ? (
+                        <MdKeyboardArrowDown size={20} className="absolute right-3 " />
+                      ) : (
+                        <MdKeyboardArrowDown color="white" size={20} className="absolute right-3 " />
+                      )}
                     </div>
-                    {visibleId === 1  ? 
-                      <Services />
-                     : <></>}
-                    
+                    {visibleId === 1 ? <Services /> : null}
                   </li>
-                  
-
-                  
-                <li className="py-2">
+                  <li className="py-2">
                     <Link to="/aboutus" className="text-primary text-xl">
                       About Us
                     </Link>
@@ -206,9 +176,9 @@ const Header = ({ theme, toggleTheme }) => {
                     </Link>
                   </li>
                   <li className="py-2">
-                    <Link to="/register" className="text-primary text-xl">
+                    <a onClick={handleRegistrationClick} className="text-primary text-xl cursor-pointer">
                       Register
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
