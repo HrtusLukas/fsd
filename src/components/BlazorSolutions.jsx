@@ -1,10 +1,10 @@
-import prestashopsolution from "../prestashopsolution";
+import magentosolution from "../magentosolution";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-const PrestashopSolutions = () => {
+const BlazorSolutions = () => {
   const [visibleId, setVisibleId] = useState(null);
 
   const toggleVisibility = (id) => {
@@ -21,7 +21,7 @@ const PrestashopSolutions = () => {
         V akých oblastiach odporúčame webové riešenie?
       </h2>
       <div className="w-[90%] md:w-[80%] lg:w-[82%] mx-auto h-auto grid grid-cols-1 md:grid-cols-1 gap-6">
-        {prestashopsolution.map((oneSolution) => {
+        {magentosolution.map((oneSolution) => {
           const { id, header, text } = oneSolution;
           return (
             <div
@@ -36,7 +36,7 @@ const PrestashopSolutions = () => {
                 {visibleId === id ? <FaMinus /> : <FaPlus />}
               </div>
 
-              
+              {/* Animated content using Framer Motion */}
               <motion.div
                 initial={false}
                 animate={{ height: visibleId === id ? "auto" : 0 }}
@@ -54,4 +54,4 @@ const PrestashopSolutions = () => {
   );
 };
 
-export default PrestashopSolutions;
+export default BlazorSolutions;

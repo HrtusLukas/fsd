@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
+    passwordRepeat: "",
     country: null,
     city: null,
   });
@@ -24,12 +27,14 @@ const RegisterForm = () => {
     }
 
     try {
-      const response = await fetch('https://localhost:7039/api/Customer', {
+      const response = await fetch('https://localhost:7039/api/Customer/register', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           password: formData.password,
           country: formData.country ? formData.country.label : "",
@@ -133,19 +138,46 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="pt-[100px] w-full max-w-[600px] h-[140vh] bg-transparent my-[20px] mx-auto flex justify-center">
+    <div className="pt-[100px] w-full max-w-[600px] h-[150vh] bg-transparent my-[20px] mx-auto flex justify-center">
       <motion.form
         onSubmit={handleSubmit}
         initial={{ y: "-100vw", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 50, duration: 0.5 }}
-        className="w-full h-[110vh] text-primary border-[1px] border-primary rounded-lg m-3"
+        className="w-full h-[130vh] text-primary border-[1px] border-primary rounded-lg m-3"
       >
         <div className="py-[10px] flex justify-center items-center flex-col border-b-[1px] border-primary gap-y-[10px]">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-[500]">Register</h1>
           <p>Please fill in this form to create an account.</p>
         </div>
         <div className="flex flex-col py-[20px]">
+          <div className="flex justify-center items-center flex-col my-[10px]">
+            <label className="flex" htmlFor="firstName"><b>First Name</b></label>
+            <input
+              className="focus:outline-none w-[75%] h-[40px] rounded-[15px] px-[10px] lg:px-[20px]"
+              type="text"
+              placeholder="Enter First Name"
+              name="firstName"
+              id="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="flex justify-center items-center flex-col my-[10px]">
+            <label className="flex " htmlFor="lastName"><b>Last Name</b></label>
+            <input
+              className="focus:outline-none w-[75%] h-[40px] rounded-[15px] px-[10px] lg:px-[20px]"
+              type="text"
+              placeholder="Enter Last Name"
+              name="lastName"
+              id="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <div className="flex justify-center items-center flex-col my-[10px]">
             <label className="flex" htmlFor="email"><b>Email</b></label>
             <input

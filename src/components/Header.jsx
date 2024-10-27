@@ -5,7 +5,6 @@ import logoDark from "../images/Black_White_Minimalist_Modern_Initial_Name_M_D_L
 import logoLight from "../images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import Services from "./Services";
-import Solutions from "./Solutions";
 import { MdAccountCircle } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -14,6 +13,7 @@ const Header = ({ theme, toggleTheme }) => {
   const [language, setLanguage] = useState("sk");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Function to check if the screen width is less than 768px
   const checkScreenSize = () => {
@@ -27,26 +27,15 @@ const Header = ({ theme, toggleTheme }) => {
   }, []);
 
   const [serviceHover, setServiceHover] = useState(false);
-  //const [solutionHover, setSolutionHover] = useState(false);
-
   const handleServicesOver = () => setServiceHover(true);
   const handleServicesOut = () => setServiceHover(false);
 
-  // const handleSolutionsOver = () => setSolutionHover(true);
-  // const handleSolutionsOut = () => setSolutionHover(false);
-
   const [visibleId, setVisibleId] = useState(null);
-
   const toggleVisibleId = (id) => {
     setVisibleId((prevId) => (prevId === id ? null : id));
   };
 
-  const navigate = useNavigate();
-
   
-  useEffect(() => {
-    localStorage.removeItem('isLoggedIn');
-  }, []); 
 
   const handleRegistrationClick = () => {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -123,7 +112,7 @@ const Header = ({ theme, toggleTheme }) => {
                   </Link>
                 </li>
                 <li className="h-[100%] flex items-center cursor-pointer">
-                  <a onClick={handleRegistrationClick}> {/* Fix the onClick */}
+                  <a onClick={handleRegistrationClick}>
                     {theme === "light" ? <MdAccountCircle size={30} /> : <MdAccountCircle color="white" size={30} />}
                   </a>
                 </li>

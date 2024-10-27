@@ -1,6 +1,6 @@
 import data from "../prestashop";
 
-const PrestashopPrice = () => {
+const ReactPrice = () => {
   return (
     <>
       <div className="bg-transparent gap-x-8 h-auto flex-wrap lg:h-[32vh] w-[90%] my-8 md:w-[80%] mx-auto rounded-[25px] border-blue-400 border-[1px] p-[5%] flex flex-col md:flex-row justify-center">
@@ -19,4 +19,4 @@ const PrestashopPrice = () => {
   );
 };
 
-export default PrestashopPrice;
+export default ReactPrice;

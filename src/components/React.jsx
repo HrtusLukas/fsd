@@ -3,17 +3,17 @@ import Header from "./Header"
 import Footer from "./Footer"
 import ChatButton from "./ChatButton"
 import UpButton from "./UpButton"
-import PrestashopMainPage from "./PrestashopMainPage"
-import PrestashopPrice from "./PrestashopPrice"
+import ReactMainPage from "./ReactMainPage"
+import ReactPrice from "./ReactPrice"
 import Partner from "./Partner"
-import PrestashopSolutions from "./PrestashopSolutions"
+import ReactSolutions from "./ReactSolutions"
 
-const Prestashop = ({theme, toggleTheme}) => {
+const ReactWeb = ({theme, toggleTheme}) => {
   return(<>
     <Header theme={theme} toggleTheme={toggleTheme} />
-    <PrestashopMainPage />
-    <PrestashopPrice />
-    <PrestashopSolutions />
+    <ReactMainPage />
+    <ReactPrice />
+    <ReactSolutions />
     <Partner />
     <ChatButton theme={theme} />
     <UpButton theme={theme} />
@@ -21,4 +21,4 @@ const Prestashop = ({theme, toggleTheme}) => {
   </>)
 }
 
-export default Prestashop
+export default ReactWeb

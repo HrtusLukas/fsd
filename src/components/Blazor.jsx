@@ -3,17 +3,17 @@ import Header from "./Header"
 import Footer from "./Footer"
 import ChatButton from "./ChatButton"
 import UpButton from "./UpButton"
-import Magento2MainPage from "./Magento2MainPage"
-import Magento2Price from "./Magento2Price"
+import BlazorMainPage from "./BlazorMainPage"
+import BlazorPrice from "./BlazorPrice"
 import Partner from "./Partner"
-import Magento2Solutions from "./Magento2Solutions"
+import BlazorSolutions from "./BlazorSolutions"
 
-const Magento2 = ({theme, toggleTheme}) => {
+const Blazor = ({theme, toggleTheme}) => {
   return(<>
     <Header theme={theme} toggleTheme={toggleTheme} />
-    <Magento2MainPage />
-    <Magento2Price />
-    <Magento2Solutions />
+    <BlazorMainPage />
+    <BlazorPrice />
+    <BlazorSolutions />
     <Partner />
     <ChatButton theme={theme} />
     <UpButton theme={theme} />
@@ -21,4 +21,4 @@ const Magento2 = ({theme, toggleTheme}) => {
   </>)
 }
 
-export default Magento2
+export default Blazor

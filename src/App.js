@@ -16,12 +16,14 @@ import ReferenciesPage from "./components/ReferenciesPage";
 import { useScroll, useTransform } from "framer-motion";
 import AboutUsPage from "./components/AboutUsPage";
 import ScrollToTop from "./components/ScrollToTop";
-import Magento2 from "./components/Magento2";
-import Prestashop from "./components/Prestashop";
+import Blazor from "./components/Blazor";
+import ReactWeb from "./components/React";
 import WebApp from "./components/WebApp";
 import Android from "./components/Android";
 import Website from "./components/Website";
 import Login from "./components/Login";
+import MyAccountPage from "./components/MyAccount";
+import EditProfile from "./components/EditProfile";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -98,7 +100,7 @@ const App = () => {
           <Route
             path="/blazor"
             element={
-              <Magento2
+              <Blazor
                 theme={theme}
                 toggleTheme={toggleTheme}
               />
@@ -107,7 +109,7 @@ const App = () => {
           <Route
             path="/react"
             element={
-              <Prestashop
+              <ReactWeb
                 theme={theme}
                 toggleTheme={toggleTheme}
               />
@@ -135,6 +137,24 @@ const App = () => {
             path="/tvorba-webstranok-na-mieru"
             element={
               <Website
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
+          <Route
+            path="/account"
+            element={
+              <MyAccountPage
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
+          <Route
+            path="/account/edit-profile"
+            element={
+              <EditProfile
                 theme={theme}
                 toggleTheme={toggleTheme}
               />
