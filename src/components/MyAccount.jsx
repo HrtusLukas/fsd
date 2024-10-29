@@ -148,7 +148,7 @@ const MyAccount = ({theme, toggleTheme}) => {
                 className="border border-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-secondary hover:text-white transition-colors duration-300"
                 onClick={handleLogout}
               >
-                <LogOut size={16} />
+                {theme === "light" ? <LogOut className='text-primary' size={16} /> : <LogOut className='text-secondary' size={16} />}
                 Logout
               </button>
             </div>
@@ -157,26 +157,26 @@ const MyAccount = ({theme, toggleTheme}) => {
             <div className="space-y-6">
               <section className="space-y-4">
                 <h2 className="text-2xl font-[500] flex items-center gap-2">
-                  <User className="text-secondary" />
+                {theme === "light" ? <User className='text-primary'  /> : <User className='text-secondary'  />}
                   Profile Information
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4 p-4 border border-primary rounded-lg">
                   <div className="flex items-center gap-3">
-                    <Mail className="text-secondary" />
+                  {theme === "light" ? <Mail className='text-primary'  /> : <Mail className='text-secondary'  />}
                     <div>
                       <p className="text-sm text-gray-500">Email</p>
                       <p>{userData.email || 'Not provided'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <User className="text-secondary" />
+                  {theme === "light" ? <User className='text-primary'  /> : <User className='text-secondary'  />}
                     <div>
                       <p className="text-sm text-gray-500">Name</p>
                       <p>{userData.firstName + " " +  userData.lastName|| 'Not provided'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Calendar className="text-secondary" />
+                  {theme === "light" ? <Calendar className='text-primary'  /> : <Calendar className='text-secondary'  />}
                     <div>
                       <p className="text-sm text-gray-500">Member Since</p>
                       <p>{formatDate(userData.created)}</p>
@@ -186,7 +186,7 @@ const MyAccount = ({theme, toggleTheme}) => {
               </section>
               <section className="space-y-4">
                 <h2 className="text-2xl font-[500] flex items-center gap-2">
-                  <Settings className="text-secondary" />
+                {theme === "light" ? <Settings className='text-primary'  /> : <Settings className='text-secondary'  />}
                   Account Settings
                 </h2>
                 <div className="space-y-3">

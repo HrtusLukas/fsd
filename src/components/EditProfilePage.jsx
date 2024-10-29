@@ -1,289 +1,140 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { User, Save, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Select from 'react-select';
+import { useNavigate } from 'react-router-dom';
 
 const EditProfilePage = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    country: null,
-    city: null,
+    city: '',
+    country: '',
   });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [countries, setCountries] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [allCities, setAllCities] = useState([]);
+  const [errors, setErrors] = useState({});
+  const [userId, setUserId] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchUserData = () => {
-      const storedUser = localStorage.getItem('user');
-      if (!storedUser) {
-        navigate('/login');
-        return;
-      }
+    const token = localStorage.getItem('token');
+    const storedUser = localStorage.getItem('user');
 
-      try {
-        const userData = JSON.parse(storedUser);
-        setFormData(prevData => ({
-          ...prevData,
-          firstName: userData.firstName || '',
-          lastName: userData.lastName || '',
-          email: userData.email || '',
-        }));
-      } catch (error) {
-        console.error('Error parsing user data:', error);
-        setError('Failed to load user data');
-      }
-    };
+    if (!token || !storedUser) {
+      navigate('/login');
+      return;
+    }
 
-    const fetchCountriesAndCities = async () => {
-      try {
-        const response = await fetch('https://countriesnow.space/api/v0.1/countries/population/cities');
-        if (!response.ok) {
-          throw new Error('Error fetching location data');
-        }
-        const result = await response.json();
-
-        // Log the result to check the structure
-        console.log('Countries and Cities Response:', result);
-
-        const uniqueCountries = Array.from(
-          new Set(result.data.map((oneCountry) => oneCountry.country))
-        ).map((country) => ({
-          label: country,
-          value: country,
-        }));
-
-        const citiesData = result.data.map((oneCountry) => ({
-          label: oneCountry.city,
-          value: oneCountry.city,
-          country: oneCountry.country,
-        }));
-
-        setCountries(uniqueCountries);
-        setAllCities(citiesData);
-      } catch (error) {
-        console.error('Error:', error);
-        setError('Failed to load location data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUserData();
-    fetchCountriesAndCities();
+    const parsedUser = JSON.parse(storedUser);
+    setUserId(parsedUser.id);
+    setFormData({
+      firstName: parsedUser.firstName || '',
+      lastName: parsedUser.lastName || '',
+      email: parsedUser.email || '',
+      city: parsedUser.city || '',
+      country: parsedUser.country || '',
+      // Set the password from localStorage (keeping it unchanged)
+      password: localStorage.getItem('password') || '', // Assuming the password is stored here
+    });
+    setIsLoading(false);
   }, [navigate]);
 
-  useEffect(() => {
-    if (formData.country) {
-      setCities(allCities.filter((city) => city.country === formData.country.value));
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.firstName) newErrors.firstName = 'First name is required.';
+    if (!formData.lastName) newErrors.lastName = 'Last name is required.';
+    if (!formData.email) {
+      newErrors.email = 'Email is required.';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Invalid email address.';
     }
-  }, [formData.country, allCities]);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (!formData.city) newErrors.city = 'City is required.';
+    if (!formData.country) newErrors.country = 'Country is required.';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
-  const handleSubmit = async (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
+    if (!validate()) return;
+
+    const token = localStorage.getItem('token');
 
     try {
-      const token = localStorage.getItem('token');
-      if (!token) {
-        throw new Error('No authentication token found');
-      }
-
-      const response = await fetch('https://localhost:7039/api/Customer/update-profile', {
+      const response = await fetch('https://localhost:7039/api/Customer/update', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          country: formData.country ? formData.country.label : '',
-          city: formData.city ? formData.city.label : '',
+          ...formData,
+          Id: userId, // Include the user ID in the request
+          // Password is not included, so it remains unchanged
         }),
       });
 
-      // Log the response for debugging
-      console.log('Profile Update Response:', response);
-
-      if (!response.ok) {
+      if (response.ok) {
+        // Update localStorage with new user data, but keep the password unchanged
+        const updatedUser = {
+          ...formData,
+          id: userId, // Ensure the userId remains the same
+        };
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        alert('Profile updated successfully!');
+        navigate('/account'); // Redirect after successful update
+      } else {
         const errorData = await response.json();
-        console.error('Error Response Data:', errorData);
-        throw new Error(errorData.message || 'Failed to update profile');
+        setErrorMessage(errorData.message || 'Update failed.');
       }
-
-      // Update stored user data
-      const userData = JSON.parse(localStorage.getItem('user'));
-      const updatedUserData = {
-        ...userData,
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-      };
-      localStorage.setItem('user', JSON.stringify(updatedUserData));
-
-      navigate('/account');
     } catch (error) {
-      console.error('Error during profile update:', error);
-      setError(error.message);
+      setErrorMessage('Network error occurred: ' + error.message);
     }
   };
+  
 
-  if (loading) {
-    return (
-      <div className="pt-[100px] flex justify-center items-center">
-        <p>Loading...</p>
-      </div>
-    );
+  if (isLoading) {
+    return <div>Loading...</div>;
   }
 
-  const selectStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      width: "100%",
-      height: "40px",
-      borderRadius: "15px",
-      paddingLeft: "10px",
-      paddingRight: "10px",
-      borderColor: state.isFocused ? "#2998dd" : "#ccc",
-      boxShadow: state.isFocused ? "0 0 0 1px #2998dd" : "none",
-      "&:hover": {
-        borderColor: "#2998dd",
-      },
-    }),
-    menu: (provided) => ({
-      ...provided,
-      borderRadius: "15px",
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isFocused ? "#f0f0f0" : "#fff",
-      color: state.isSelected ? "#2998dd" : "#333",
-      "&:hover": {
-        backgroundColor: "#f0f0f0",
-      },
-    }),
-  };
-
   return (
-    <div className="pt-[100px] lg:w-[96.5vw] min-h-[90vh] bg-transparent my-[20px] mx-[20px] flex justify-center">
-      <motion.div
-        initial={{ y: "-100vw", opacity: 0 }}
+    <div className="pt-[100px] w-full max-w-[600px] h-auto bg-transparent my-[20px] mx-auto flex justify-center">
+      <motion.form
+        onSubmit={onSubmit}
+        initial={{ y: '-100vw', opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 50, duration: 0.5 }}
-        className="w-full max-w-[600px] text-primary"
+        transition={{ type: 'spring', stiffness: 50, duration: 0.5 }}
+        className="w-full text-primary border-[1px] border-primary rounded-lg m-3 p-6"
       >
-        <div className="border border-primary rounded-lg">
-          <div className="border-b border-primary p-4">
-            <div className="flex items-center justify-between">
-              <h1 className="text-3xl lg:text-4xl font-[500] flex items-center gap-2">
-                <User className="text-secondary" />
-                Edit Profile
-              </h1>
-              <button
-                onClick={() => navigate('/account')}
-                className="border border-primary px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-secondary hover:text-white transition-colors duration-300"
-              >
-                <ArrowLeft size={16} />
-                Back
-              </button>
-            </div>
-          </div>
-
-          <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            <div className="space-y-4">
-              <div>
-                <label className="block mb-2" htmlFor="firstName">First Name</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="w-full h-[40px] rounded-[15px] px-[10px] focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2" htmlFor="lastName">Last Name</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="w-full h-[40px] rounded-[15px] px-[10px] focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2" htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full h-[40px] rounded-[15px] px-[10px] focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2">Country</label>
-                <Select
-                  options={countries}
-                  value={formData.country}
-                  onChange={(selectedOption) => setFormData({ ...formData, country: selectedOption })}
-                  styles={selectStyles}
-                  className="w-full rounded-[15px] bg-white"
-                />
-              </div>
-
-              <div>
-                <label className="block mb-2">City</label>
-                <Select
-                  options={cities}
-                  value={formData.city}
-                  onChange={(selectedOption) => setFormData({ ...formData, city: selectedOption })}
-                  isDisabled={!formData.country}
-                  styles={selectStyles}
-                  className="w-full rounded-[15px] bg-white"
-                />
-              </div>
-            </div>
-
-            {error && (
-              <div className="text-red-500 text-center py-2">
-                {error}
-              </div>
-            )}
-
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors duration-300 flex items-center gap-2"
-              >
-                <Save size={16} />
-                Save Changes
-              </button>
-            </div>
-          </form>
+        <div className="py-[10px] flex justify-center items-center flex-col border-b-[1px] border-primary gap-y-[10px] mb-5">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-[500]">Edit Profile</h1>
         </div>
-      </motion.div>
+        <div className="flex flex-col">
+          {['firstName', 'lastName', 'email', 'city', 'country'].map((field, index) => (
+            <div className="flex justify-center items-center flex-col my-[10px]" key={index}>
+              <label className="flex" htmlFor={field}><b>{field.charAt(0).toUpperCase() + field.slice(1)}</b></label>
+              <input
+                className="focus:outline-none w-[75%] h-[40px] rounded-[15px] px-[10px] lg:px-[20px]"
+                type={field === 'email' ? 'email' : 'text'}
+                id={field}
+                value={formData[field]}
+                onChange={(e) => setFormData({ ...formData, [field]: e.target.value })}
+                required
+              />
+              {errors[field] && <div className="text-red-500">{errors[field]}</div>}
+            </div>
+          ))}
+          <div className="flex justify-center items-center flex-col my-[10px] mb-[20px]">
+            <button
+              type="submit"
+              className="bg-secondary w-full max-w-[175px] h-[40px] rounded-[15px] font-[500] hover:scale-105 flex items-center justify-center"
+            >
+              Update Profile
+            </button>
+          </div>
+          {errorMessage && <div className="text-red-500">{errorMessage}</div>}
+        </div>
+      </motion.form>
     </div>
   );
 };

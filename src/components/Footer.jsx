@@ -62,10 +62,10 @@ const Footer = ({ theme }) => {
           <h3 className="font-semibold text-[24px] lg:text-[30px]">Služby</h3>
           <ul className="mt-2 space-y-2 text-[14px] md:text-[16px] lg:text-[17px]">
             <li className="underline hover:no-underline">
-              <Link to="/magento-2-e-shop">Magento 2 e-shop</Link>
+              <Link to="/blazor">Blazor</Link>
             </li>
             <li className="underline hover:no-underline">
-              <Link to="/prestashop-e-shop">Prestashop e-shop</Link>
+              <Link to="/react">React</Link>
             </li>
             <li className="underline hover:no-underline">
               <Link to="/vyvoj-webovych-aplikacii">Vývoj webových aplikácií</Link>

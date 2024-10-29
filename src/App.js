@@ -24,6 +24,7 @@ import Website from "./components/Website";
 import Login from "./components/Login";
 import MyAccountPage from "./components/MyAccount";
 import EditProfile from "./components/EditProfile";
+import ChangePassword from "./components/ChangePassword";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -160,8 +161,18 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/account/change-password"
+            element={
+              <ChangePassword
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 };
