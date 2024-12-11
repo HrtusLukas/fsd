@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import image from "../images/magento-2-eshop.png.webp"; // You may replace this with a relevant Blazor image.
+import image from "../images/magento-2-eshop.png.webp"; 
 import image2 from "../images/Blazor.png";
 
 const BlazorMainPage = () => {
@@ -8,25 +8,25 @@ const BlazorMainPage = () => {
       <section className="pt-[100px] w-[100vw] lg:w-[96.5vw] h-auto bg-transparent lg:mx-[20px] flex flex-col lg:flex-row">
         <div className="w-[100%] lg:w-[50%] flex flex-col text-primary mt-[5%] px-[5%] lg:px-[7%]">
           <div>
-            <p className="text-lg lg:text-xl">Webové aplikácie na platforme</p>
+            <p className="text-lg lg:text-xl">Web Applications Platform</p>
           </div>
           <div className="my-4">
             <h1 className="text-4xl lg:text-5xl">ASP.NET Blazor</h1>
           </div>
           <div className="w-[100%] mb-3">
             <p className="text-[18px] lg:text-[22px] mb-4">
-              Vytvárajte interaktívne webové aplikácie s jednou z najinovatívnejších technológií na trhu - ASP.NET Blazor.
-              Užívajte si výhody plne integrovaného ekosystému pre moderné webové aplikácie bez nutnosti učenia nového jazyka!
+              Build interactive web applications using one of the most innovative technologies on the market - ASP.NET Blazor.
+              Enjoy the benefits of a fully integrated ecosystem for modern web apps without needing to learn a new language!
             </p>
             <p className="text-[14px] lg:text-[16px] mb-4">
-              Blazor vám umožňuje písať front-end a back-end aplikácie v C# a zdieľať kód medzi nimi, čím zjednodušuje vývoj.
-              S robustným komponentným modelom a rozsiahlymi knižnicami vám Blazor ponúka flexibilitu a výkon, ktorý potrebujete pre
-              vytvorenie bohatých webových aplikácií.
+              Blazor allows you to write both front-end and back-end code in C# and share code between them, simplifying development.
+              With a robust component model and extensive libraries, Blazor offers the flexibility and power you need to create
+              rich web applications.
             </p>
             <p className="text-[14px] lg:text-[16px] mb-4">
-              Vďaka podpoře server-side a client-side rendering, môžete vytvárať aplikácie, ktoré sú rýchle, responzívne a
-              majú vynikajúci užívateľský zážitok. Blazor vás zbavuje zložitosti JavaScriptu a umožňuje vám sústrediť sa
-              na logiku a používateľské rozhranie aplikácie.
+              Thanks to support for both server-side and client-side rendering, you can create applications that are fast, responsive,
+              and provide an excellent user experience. Blazor frees you from the complexities of JavaScript, allowing you to focus
+              on application logic and user interface.
             </p>
           </div>
         </div>

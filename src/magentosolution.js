@@ -1,39 +1,39 @@
 const magentosolution = [
   {
     id: 1,
-    header: "Vytvorenie webových stránok",
-    text: "Počas našej 10 ročnej praxe sme pracovali už na stovkách projektov s cieľom priamo zarábať, alebo získavať dopyty pre svoj obchod. V rámci nášho prístupu venujeme projektom maximálnu osobitnú pozornosť za účasti profesionálneho projektového manažéra či už ide o návrh architektúry webu, call to action, až po dizajn a obsah webu.I po uvedení do prevádzky zostáva pre vás projektový manažér k dispozícii pre ďalšiu podporu, aktualizácie a prípadné úpravy. S tímom WAME môžete očakávať profesionálny partnersky prístup, individuálnu starostlivosť a výsledky, ktoré presahujú vaše očakávania."
+    header: "Website Development",
+    text: "With over a decade of experience, we have successfully completed hundreds of projects aimed at generating revenue and attracting inquiries for your business. We dedicate maximum attention to each project, involving a professional project manager in every phase—from designing the website architecture and implementing effective calls to action, to the overall design and content creation. Even after launch, your project manager remains available for ongoing support, updates, and modifications. With FSD, you can expect a professional partnership, personalized attention, and results that exceed your expectations."
   },
   {
     id: 2,
-    header: "Web stránka samosprávy mesta alebo obce",
-    text: "Vytvorenie webových stránok miest a obcí je nevyhnutné pre zlepšenia komunikácie s občanmi, poskytovania informácií a umožňovania efektívnej správy. Pri vytváraní webovej stránky pre verejný sektor je dôležité zamerať sa na jednoduchosť a prehľadnosť, poskytnutie dôležitých informácií ako aj zverejňovanie dokumentov, ale tiež dbať na znevýhodnených občanov a na kybernetickú bezpečnosť riešenia, ktorú garantujeme aj externými penetračnými testami."
+    header: "Municipal or Community Websites",
+    text: "Creating websites for towns and municipalities is essential for enhancing communication with citizens, providing information, and enabling efficient management. When developing a public sector website, it is important to focus on simplicity and clarity, ensuring that crucial information is accessible and documents are published. We also prioritize inclusivity for disadvantaged citizens and guarantee cybersecurity measures, including external penetration testing."
   },
   {
     id: 3,
-    header: "Edukačné webstránky (LMS)",
-    text: "Plánujete portál pre vzdelávanie či testovanie? Máte víziu vytvorenia webstránky, kde budú vaši užívatelia radi tráviť svoj voľný čas? V tom prípade možno hľadáte LMS (learning management system), ktorý je skvelým spôsobom ako vytvárať obsah kurzov a testov. Pri návrhu edukačných webov je dôležité pripraviť kvalitný obsah, aby boli informácie pre používateľov jasné, dostupné a interaktívne."
+    header: "Educational Websites (LMS)",
+    text: "Are you planning a portal for education or testing? Do you envision a website where your users enjoy spending their free time? If so, you might be looking for a Learning Management System (LMS), which is an excellent way to create course content and assessments. When designing educational websites, it’s crucial to prepare high-quality content to ensure that information is clear, accessible, and interactive for users."
   },
   {
     id: 4,
-    header: "Interaktívne webové-prvky",
-    text: "Zaujať v online priestore je náročnejšie, preto interaktívne webové prvky a animácie zaujímajú čoraz prominentnejšiu úlohu než kedykoľvek predtým a sú nevyhnutnou súčasťou každej kvalitnej webovej stránky. Od animovaných prvkov cez interaktívne formuláre, grafy, vizualizácie, prezentácie, hodnotenia, chatboty až po herné prvky sú všetky nie len nástrojom na pritiahnutie pozornosti, ale predstavujú aj efektívny spôsob poskytnutia pridaných hodnôt pre návštevníkov."
+    header: "Interactive Web Elements",
+    text: "Capturing attention in the online space is increasingly challenging, making interactive web elements and animations more vital than ever. These features are essential components of any high-quality website. From animated components and interactive forms to graphs, visualizations, presentations, ratings, chatbots, and gamified elements, these tools not only attract attention but also provide added value to visitors."
   },
   {
     id: 5,
-    header: "Tvorba prezentačnej webstránky s kalkulačkou",
-    text: "Ak je nevyhnutnou súčasťou vášho business plánu web s kalkuláciou cien, rozmerov alebo iných atribútov, spôsob ako informovať vašich potenciálnych zákazníkov o produktoch a službách, ktoré poskytujete, tak web s konfigurátorom je to najlepšie riešenie. Poskytneme úvodnú konzultáciu, kde si ozrejmíme vaše potreby a požiadavky na výpočty. Následne vypracujeme personalizovanú cenovú ponuku a po odsúhlasení prechádzame do procesu návrhu štruktúry webu, programovania, testovania, schvaľovania a nasadenia."
+    header: "Presentation Website with Calculator",
+    text: "If your business plan requires a website with price calculations, dimensions, or other attributes to inform potential customers about your products and services, a configurator website is the ideal solution. We will provide an initial consultation to clarify your needs and calculation requirements. Subsequently, we will develop a personalized quote, and upon approval, we will proceed with the design, programming, testing, approval, and deployment of the site."
   },
   {
     id: 6,
-    header: "Inzertný portál",
-    text: "S vytváraním portálov zameraných na ponuku a dopyt máme viaceré skúsenosti. Či už bazárový systém, zdieľane služieb, carsharing, online trhoviská a pod. S naším skúseným tímom vývojárov WAME vám vytvoríme dynamický a pútavý inzertný portál, ktorý bude presne odrážať váš obchodný model."
+    header: "Advertisement Portal",
+    text: "We have extensive experience in creating portals focused on supply and demand. Whether it’s a classifieds system, a service-sharing platform, car-sharing, or online marketplaces, our experienced FSD development team will create a dynamic and engaging advertisement portal that accurately reflects your business model."
   },
   {
     id: 7,
-    header: "Web na mieru",
-    text: "Od tímu WAME môžete očakávať presne plánovaný proces tvorby webu na mieru, ktorý dokáže prezentovať vašu firmu či značku. Vytvoríme vám na mieru prispôsobenú stránku, ktorá bude dizajnová, ale aj používateľsky prívetivá. Vy nám len dodáte obsah a o ostatné sa postaráme my. Samozrejmosťou je aj zaškolenie vašich zamestnancov v administrácii webovej stránky na mieru a následná správa so servisom."
-  },
-]
+    header: "Custom Website Development",
+    text: "From FSD, you can expect a meticulously planned process for developing a custom website that effectively showcases your company or brand. We will create a tailored site that is both visually appealing and user-friendly. You simply provide the content, and we will take care of the rest. We also offer training for your staff on how to manage the custom website and provide ongoing maintenance and support."
+  }
+];
 
-export default magentosolution
+export default magentosolution;

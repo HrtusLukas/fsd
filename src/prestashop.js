@@ -1,23 +1,24 @@
 const prestashopData = [
   {
     id: 1,
-    header: "3900€",
-    text: "cena už od"
+    header: "€3900",
+    text: "starting price",
   },
   {
     id: 2,
-    header: "15€",
-    text: "mesačné náklady"
+    header: "€15",
+    text: "monthly cost",
   },
   {
     id: 3,
-    header: "2 mesiace",
-    text: "doba dodania od"
+    header: "2 months",
+    text: "delivery time from",
   },
   {
     id: 4,
-    header: "v TOP 5",
-    text: "ecommerce platforma"
-  }
-]
-export default prestashopData
+    header: "in TOP 5",
+    text: "ecommerce platform",
+  },
+];
+
+export default prestashopData;

@@ -18,7 +18,7 @@ const ReactSolutions = () => {
   return (
     <div className="pt-[100px] w-[100vw] h-auto bg-transparent lg:m-auto lg:mx-[20px]">
       <h2 className="text-primary text-3xl font-[500] text-center mb-[60px]">
-        V akých oblastiach odporúčame webové riešenie?
+      "In which areas do we recommend web solutions?"
       </h2>
       <div className="w-[90%] md:w-[80%] lg:w-[82%] mx-auto h-auto grid grid-cols-1 md:grid-cols-1 gap-6">
         {prestashopsolution.map((oneSolution) => {

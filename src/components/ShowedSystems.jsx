@@ -5,7 +5,6 @@ import systemdata from "../systemdata";
 const ShowedSystems = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Function to check if the screen width is less than 768px
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < 768);
   };
@@ -13,13 +12,13 @@ const ShowedSystems = () => {
 
 
   useEffect(() => {
-    // Initial check
+
     checkScreenSize();
 
-    // Add event listener for screen resize
+
     window.addEventListener("resize", checkScreenSize);
 
-    // Cleanup event listener
+
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
@@ -55,7 +54,7 @@ const ShowedSystems = () => {
                 ref={ref}
                 style={
                   isMobile
-                    ? {} // No animations on mobile
+                    ? {} 
                     : {
                         scale: scaleProgres,
                         opacity: opacityProgres,

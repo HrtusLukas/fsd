@@ -36,7 +36,7 @@ const BlazorSolutions = () => {
                 {visibleId === id ? <FaMinus /> : <FaPlus />}
               </div>
 
-              {/* Animated content using Framer Motion */}
+        
               <motion.div
                 initial={false}
                 animate={{ height: visibleId === id ? "auto" : 0 }}

@@ -14,8 +14,7 @@ import { MdOutlineLocalPostOffice } from "react-icons/md";
 const Footer = ({ theme }) => {
   return (
     <div className="w-full lg:h-[85.5vh] h-auto bg-footer text-primary relative py-8 md:py-16">
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-[90%] m-auto pb-8 border-primary justify-center border-b-[0.5px] border-solid">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-[97.5%] px-[4%] m-auto pb-8 border-primary justify-center border-b-[0.5px] border-solid">
  
         <div className="flex flex-col items-start md:items-center lg:items-start">
           <div>
@@ -40,7 +39,7 @@ const Footer = ({ theme }) => {
             <br />
             023 21 Korňa
           </p>
-          {/* Social media icons */}
+          
           <div className="grid grid-cols-3 grid-rows-2 gap-2 mt-4 w-fit">
             {[
               { href: "", icon: <FaFacebookF size={20} />, id: "facebook" },
@@ -57,9 +56,8 @@ const Footer = ({ theme }) => {
           </div>
         </div>
 
-
         <div className="flex flex-col">
-          <h3 className="font-semibold text-[24px] lg:text-[30px]">Služby</h3>
+          <h3 className="font-semibold text-[24px] lg:text-[30px]">Services</h3>
           <ul className="mt-2 space-y-2 text-[14px] md:text-[16px] lg:text-[17px]">
             <li className="underline hover:no-underline">
               <Link to="/blazor">Blazor</Link>
@@ -68,43 +66,41 @@ const Footer = ({ theme }) => {
               <Link to="/react">React</Link>
             </li>
             <li className="underline hover:no-underline">
-              <Link to="/vyvoj-webovych-aplikacii">Vývoj webových aplikácií</Link>
+              <Link to="/vyvoj-webovych-aplikacii">Web Application Development</Link>
             </li>
             <li className="underline hover:no-underline">
-              <Link to="/vyvoj-mobilnych-aplikacii">Vývoj mobilných aplikácií</Link>
+              <Link to="/vyvoj-mobilnych-aplikacii">Mobile Application Development</Link>
             </li>
             <li className="underline hover:no-underline">
-              <Link to="/tvorba-webstranok-na-mieru">Firemné weby a portály</Link>
+              <Link to="/tvorba-webstranok-na-mieru">Custom Websites and Portals</Link>
             </li>
           </ul>
         </div>
-
 
         <div className="flex flex-col">
           <h3 className="font-semibold text-[24px] lg:text-[30px]">FSD</h3>
           <ul className="mt-2 space-y-2 text-[14px] md:text-[16px] lg:text-[17px]">
             <li className="underline hover:no-underline">
-              <a href="">O tíme</a>
+              <Link to="/aboutus">About the Team</Link>
             </li>
             <li className="underline hover:no-underline">
-              <a href="">Referencie</a>
+              <Link to="/references">References</Link>
             </li>
             <li className="underline hover:no-underline">
-              <a href="">Kontakt</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="underline hover:no-underline">
-              <a href="">Všeobecné obchodné podmienky</a>
+              <Link href="">General Terms and Conditions</Link>
             </li>
             <li className="underline hover:no-underline">
-              <a href="">Logo a súbory na stiahnutie</a>
+              <Link href="">Logo and Download Files</Link>
             </li>
           </ul>
         </div>
 
- 
         <div className="flex flex-col items-start">
           <h3 className="font-semibold text-[24px] lg:text-[30px]">FSD Newsletter</h3>
-          <p className="mt-2 text-[14px] md:text-[16px]">Prihláste sa na odber noviniek</p>
+          <p className="mt-2 text-[14px] md:text-[16px]">Subscribe to our newsletter</p>
           <EmailForm />
           <div className="mt-4">
             <a href="https://www.ecommercebridge.sk/">
@@ -121,13 +117,12 @@ const Footer = ({ theme }) => {
       <div className="absolute left-1/2 transform -translate-x-1/2 top-[80%] translate-y-[-140%]">
         <Link to="/contact" className="w-[175px] hidden lg:flex hover:scale-[1.1] justify-center items-center gap-2 bg-secondary h-[55px] rounded-[15px]">
           <MdOutlineLocalPostOffice size={22} />
-          NAPÍŠTE NÁM
+          WRITE TO US
         </Link>
       </div>
 
- 
       <div className="mt-8 lg:mt-[70px] text-center text-[12px] md:text-[14px] lg:text-[16px]">
-        &copy; 2024 FSD S.R.O Všetky práva vyhradene
+        &copy; 2024 FSD S.R.O All rights reserved
       </div>
     </div>
   );

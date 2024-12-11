@@ -1,39 +1,39 @@
 const androidsolution = [
   {
     id: 1,
-    header: "Aplikácia pre obchodných zástupcov napojená na CRM",
-    text: "CRM (Customer Relationship Management) je komplexný obchodný systém, ktorý slúži na správu vzťahov s klientmi. Tento nástroj zaznamenáva, analyzuje a uchováva dôležité informácie o klientoch, čím umožňuje lepšie porozumenie ich potrieb a preferencií. CRM zvyšuje efektivitu obchodných procesov, čo vedie k zlepšeniu obchodných vzťahov, zvýšeniu produktivity a zvyšovaniu lojality klientov, čím prispieva k rastu a konkurencieschopnosti firmy."
+    header: "Application for Sales Representatives Connected to CRM",
+    text: "CRM (Customer Relationship Management) is a comprehensive business system designed to manage relationships with clients. This tool records, analyzes, and stores important information about customers, allowing for a better understanding of their needs and preferences. CRM enhances the efficiency of business processes, leading to improved business relationships, increased productivity, and greater customer loyalty, contributing to the growth and competitiveness of the company."
   },
   {
     id: 2,
-    header: "Dopravná či carsharing aplikácia",
-    text: "Vytvorili sme niekoľko aplikácií a systémov pre riadenie vozidiel, plánovanie trás, či spájanie jázd medzi vodičmi, či už ako carsharing alebo pre taxislužby. Pre dopravné spoločnosti, akú je komiónová preprava, máme skúsenosti s vývojom FMS (fleet management systému), alebo v prípade osobnej dopravy ako systém pre plánovanie vozidiel a vodičov na transferovú dopravu."
+    header: "Transportation or Carsharing Application",
+    text: "We have developed several applications and systems for vehicle management, route planning, and ride-sharing among drivers, whether for carsharing or taxi services. For transportation companies, such as freight transport, we have experience in developing FMS (Fleet Management Systems), or in the case of passenger transport, systems for planning vehicles and drivers for transfer services."
   },
   {
     id: 3,
-    header: "Taxi dispečingový systém s aplikáciami",
-    text: "Potreba jedného centrálneho tel. Čísla pre celú taxislužbu, no s tým, že budú zákazky férovo prerozdelené medzi X vodičov, rýchlo, efektívne, s GPS lokalizáciou či nahrávaním hovorov? K tomu vlastná zákaznícka aplikácia, plánované objednávky, meranie a reporting všetkého čo si spomeniete vo svojej firme? To všetko a ešte omnoho viac zvládne naša služba SENSET.sk pre taxi firmy, s ktorou sme sa stali najväčším poskytovateľom dispečingového nástroja na Slovensku. Pridajte sa k nám a ovládnite svoju taxislužbu v štýle 21. Storočia s najefektívnejším dispečingovým programom na SK&CZ trhu."
+    header: "Taxi Dispatch System with Applications",
+    text: "Is there a need for a single central phone number for the entire taxi service, while ensuring that jobs are fairly distributed among X drivers quickly, efficiently, with GPS localization, and call recording? Along with that, a dedicated customer application, planned orders, measurement, and reporting of everything you can think of in your company? All this and much more is handled by our SENSET.sk service for taxi companies, making us the largest provider of dispatch tools in Slovakia. Join us and take control of your taxi service in the 21st century with the most efficient dispatch program in the SK & CZ market."
   },
   {
     id: 4,
-    header: "Frontend development",
-    text: "Stále väčším trendom je vývoj mobilných aplikácií. No netreba zabúdať, že najčastejší spôsob získavania zákazníkov je Google Search a teda ponúkať zákazníkom k mobilnej aplikácii aj webovú verziu je viac ako odporúčané. Vďaka mobilnej verzii svojej appky môžete istú časť obsahu zverejňovať pre Google indexáciu a organické vyhľadávanie, podobne ako je to napr. V prípade Eventov cez Facebook, či stránok firiem na Facebooku. Zároveň niektoré prípady si práve naopak môžu pre svoju cieľovú skupinu vyžadovať práve hlavne webový portál v responzívnom dizajne. Vo WAME sa špecializujeme na vývoj hybridných webových a mobilných aplikácií, kde v istých prípadoch vieme docieliť až takej kompatibility, že jedným vývojom zdrojového kódu, získame webové riešenie v responzívnom prevedení a aj mobilné appky pre iOS a Android. Jedným z našich riešení je aj zákaznícka aplikácia SPP Distribúcia ktorá je tvorená touto technológiou, čo značne šetrí náklady na vývoj ale aj ďalší servis a údržbu."
+    header: "Frontend Development",
+    text: "The trend of mobile application development continues to grow. However, it is essential not to forget that the most common way to acquire customers is through Google Search, making it highly recommended to offer customers a web version alongside the mobile application. With the mobile version of your app, you can publish some content for Google indexing and organic search, similar to how it is done with events on Facebook or company pages on Facebook. At the same time, some cases may require primarily a web portal in responsive design for their target audience. At WAME, we specialize in developing hybrid web and mobile applications, where in some cases we can achieve such compatibility that with one source code development, we obtain a web solution in a responsive format and mobile apps for both iOS and Android. One of our solutions is the customer application for SPP Distribution, created using this technology, which significantly saves development costs as well as further service and maintenance."
   },
   {
     id: 5,
-    header: "Interný tím programátorov, údržba a servis (SLA)",
-    text: "Náš tím tvoria zväčša interní programátori, vďaka čomu sme flexibilní a vieme reagovať na Vaše nové požiadavky, naplánovať si dlhodobé práce, ale aj supportovať v prípade incidentov ktoré môžu v systémoch a aplikáciách vznikať. Vo WAME poskytujeme služby backend vývojárov na platforme PHP Laravel frameworku, Magento 2 a Prestashop, ďalej frontendových vývojárov so skúsenosťami vo Vue.js, javascript a všetky s tým spojené technológie, ďalej grafických dizajnérov pre UX a UI, alebo softwérového architekta a testerov. Súčasťou komunikácie je vždy projektový manažér s niekoľko ročnými skúsenosťami. Pre dôležité projekty s vysokým zaťažením poskytujeme SLA zmluvy až do úrovne garancie zásahu do 3 hodín."
+    header: "Internal Team of Programmers, Maintenance, and Support (SLA)",
+    text: "Our team mainly consists of internal programmers, allowing us to be flexible and responsive to your new requests, plan long-term work, and provide support in case of incidents that may arise in systems and applications. At WAME, we offer backend development services on the PHP Laravel framework, Magento 2, and Prestashop platforms, as well as frontend developers with experience in Vue.js, JavaScript, and all associated technologies, graphic designers for UX and UI, and software architects and testers. Communication always involves a project manager with several years of experience. For important projects with high workloads, we provide SLA contracts guaranteeing response within 3 hours."
   },
   {
     id: 6,
-    header: "Rezervačná a plánovacia aplikácia pre technikov v teréne",
-    text: "Webový systém pre správu rezervácií a plánovania termínov v službách predstavuje nástroj, ktorý obchodným zástupcom umožňuje dôkladne monitorovať a vyhodnocovať zákazky s ohľadom na ich dôležitosť a hodnotu pre firmu. Tento systém zhromažďuje a analyzuje dáta o rezerváciách a zákazkách, poskytuje prehľad o finančných príjmoch, prioritizuje klientov na základe histórie a zvyšuje schopnosť plánovať a optimalizovať vyťaženosť zamestnancov. Výsledkom je zlepšené rozhodovanie o investovaní zdrojov do jednotlivých zákaziek, zvýšenie efektivity obchodných operácií a dosiahnutie optimálneho pomera medzi dôležitosťou zákaziek a výkonnosťou firmy."
+    header: "Reservation and Planning Application for Field Technicians",
+    text: "A web system for managing reservations and scheduling appointments in services provides a tool that allows sales representatives to thoroughly monitor and evaluate jobs based on their importance and value to the company. This system collects and analyzes data on reservations and orders, provides an overview of financial income, prioritizes clients based on history, and increases the ability to plan and optimize employee utilization. The result is improved decision-making about resource investment in individual orders, increased efficiency of business operations, and achieving an optimal balance between the importance of orders and the performance of the company."
   },
   {
     id: 7,
-    header: "Backend pre riadenie mobilnej aplikácie",
-    text: "Máte nápad na vlastnú aplikáciu? Pravdepodobne k nej budete potrebovať riadiaci systém s úložiskom (databázy). Každá mobilná aplikácia pre iOS a Android, ktorá má získavať a zobrazovať nejaké dáta, bude pre svoju existenciu potrebovať administračný systém pre Vás ako prevádzkovateľa, prípadne pre manažment, marketing, alebo možno aj pre koncových užívateľov s obmedzenými právami pre prístup. Ak má aplikácia predávať služby, faktúrovať, posielať notifikácie, registrovať užívateľov a tí užívatelia si majú vedieť pridávať a meniť svoje informácie, tak určite budete potrebovať práve backend systém, ktorý komunikuje s aplikáciami pomocou API. Vyvinuli sme desiatky takýchto systémov, poznáme efektívne riešenia pre správu dát, pre reporting, vyhľadávanie, editáciu a nastavenia a to všetko v peknom administračnom UI Laravel Nova v kombinácii s Vue.js. Radi si poradíme aj s vašou aplikáciou."
+    header: "Backend for Managing Mobile Applications",
+    text: "Do you have an idea for your own application? You will likely need a management system with storage (database). Every mobile application for iOS and Android that is supposed to gather and display data will need an administrative system for you as the operator, potentially for management, marketing, or even for end users with limited access rights. If the application is to sell services, issue invoices, send notifications, register users, and allow users to add and modify their information, you will definitely need a backend system that communicates with applications via API. We have developed dozens of such systems and know effective solutions for data management, reporting, searching, editing, and settings, all within a nice administrative UI using Laravel Nova combined with Vue.js. We would be happy to assist you with your application as well."
   },
-]
+];
 
-export default androidsolution
+export default androidsolution;

@@ -1,26 +1,26 @@
-import fixedprice from "./images/fixedprice.svg"
-import develop from "./images/develop.svg"
-import monthly from "./images/monthly.svg"
+import fixedprice from "./images/fixedprice.svg";
+import develop from "./images/develop.svg";
+import monthly from "./images/monthly.svg";
 
-const pricingdata =  [
+const pricingdata = [
   {
     id: 1,
     image: fixedprice,
-    header: "Fixná cena",
-    text: "“Krabicové riešenie” akými sú v našom prípade štandardizované weby a internetové obchody začíname spravidla fixnou cenou za kompletný projekt podľa vopred danej špecifikácie. V prípade, ak je potrebné vyvinúť špecifický modul, tak ten je osobitne účtovaný kontinuálnym vývojom."
+    header: "Fixed Price",
+    text: "A “box solution” such as our standardized websites and online stores typically starts with a fixed price for the complete project based on a pre-defined specification. If a specific module needs to be developed, it will be charged separately as continuous development."
   },
   {
     id: 2,
     image: develop,
-    header: "Kontinuálny vývoj",
-    text: "Tento model najčastejšie kombinujeme so zakúpením hotových modulov (licencie) s vývojom podľa detailných špecifikácií agilnou metodikou SCRUM. V tomto modeli výsledky práce dodávame v menších častiach, pravidelne podľa dohodnutých intervalov a dohodnutom rozsahu podľa kapacity tímu."
+    header: "Continuous Development",
+    text: "This model is most commonly combined with the purchase of ready-made modules (licenses) and development based on detailed specifications using the Agile SCRUM methodology. In this model, we deliver work results in smaller parts, regularly according to agreed intervals and the scope defined by the team's capacity."
   },
   {
     id: 3,
     image: monthly,
-    header: "Mesačný paušál",
-    text: "Projekty a služby, ktoré si vyžadujú pravidelné práce a údržbu naceňujeme na mesačné paušály. Najčastejšie sa jedná o technický support, pravidelnú optimalizáciu (napr. formou A/B testov) a online marketingové služby ako sú správa PPC kampaní či SEO optimalizácia."
+    header: "Monthly Subscription",
+    text: "Projects and services that require regular work and maintenance are priced on a monthly subscription basis. This often includes technical support, regular optimization (e.g., through A/B testing), and online marketing services such as PPC campaign management or SEO optimization."
   }
-]
+];
 
-export default pricingdata
+export default pricingdata;

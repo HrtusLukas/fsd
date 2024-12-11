@@ -18,7 +18,7 @@ const AboutUsMainPage = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 50, duration: 0.6 }}
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl">O tíme FSD</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl">About FSD</h1>
         </motion.div>
 
         <motion.div
@@ -28,17 +28,15 @@ const AboutUsMainPage = () => {
           transition={{ type: "spring", stiffness: 50, duration: 0.7 }}
         >
           <p className="text-[18px] sm:text-[20px] lg:text-[22px] mb-[14.4px]">
-            Sme tím profesionálov s dlhoročnými skúsenosťami a referenciami v odbore. Naším hlavným zameraním sú úspešné e-shopy a mobilné alebo webové aplikácie na mieru.
+            We are a team of professionals with years of experience and references in the industry. Our main focus is on successful e-shops and custom mobile or web applications.
           </p>
           <p className="text-[18px] sm:text-[20px] lg:text-[22px] mb-[14.4px]">
-            Vyvíjame štandardizovane svetovými technológiami, vďaka čomu dostávate garanciu znovupoužiteľnosti vytvoreného kódu aplikácie, elimináciu vendor-lock rizika a možnosť kedykoľvek rozširovať tím projektu o vlastných členov.
+            We develop with standardized world technologies, which guarantees you the reusability of the created application code, elimination of vendor-lock risks, and the possibility to expand the project team with your own members at any time.
           </p>
           <p className="text-[18px] sm:text-[20px] lg:text-[22px] mb-[14.4px]">
-            Nad našou prácou máte plnú kontrolu vďaka plne transparentnému projektovému riadeniu agilnou metodikou SCRUM a prístupom k online systému projektového riadenia Teamwork.com.
+            You have full control over our work thanks to fully transparent project management using the agile SCRUM methodology and access to the online project management system Teamwork.com.
           </p>
         </motion.div>
-
-     
       </div>
     </section>
   );

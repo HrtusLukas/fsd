@@ -33,8 +33,7 @@ const EditProfilePage = () => {
       email: parsedUser.email || '',
       city: parsedUser.city || '',
       country: parsedUser.country || '',
-      // Set the password from localStorage (keeping it unchanged)
-      password: localStorage.getItem('password') || '', // Assuming the password is stored here
+      password: localStorage.getItem('password') || '', 
     });
     setIsLoading(false);
   }, [navigate]);
@@ -51,7 +50,7 @@ const EditProfilePage = () => {
     if (!formData.city) newErrors.city = 'City is required.';
     if (!formData.country) newErrors.country = 'Country is required.';
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    return Object.keys(newErrors).length === 0; 
   };
 
   const onSubmit = async (e) => {
@@ -69,20 +68,20 @@ const EditProfilePage = () => {
         },
         body: JSON.stringify({
           ...formData,
-          Id: userId, // Include the user ID in the request
-          // Password is not included, so it remains unchanged
+          Id: userId, 
+
         }),
       });
 
       if (response.ok) {
-        // Update localStorage with new user data, but keep the password unchanged
+
         const updatedUser = {
           ...formData,
-          id: userId, // Ensure the userId remains the same
+          id: userId, 
         };
         localStorage.setItem('user', JSON.stringify(updatedUser));
         alert('Profile updated successfully!');
-        navigate('/account'); // Redirect after successful update
+        navigate('/account'); 
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData.message || 'Update failed.');
@@ -123,7 +122,9 @@ const EditProfilePage = () => {
               />
               {errors[field] && <div className="text-red-500">{errors[field]}</div>}
             </div>
+            
           ))}
+          
           <div className="flex justify-center items-center flex-col my-[10px] mb-[20px]">
             <button
               type="submit"

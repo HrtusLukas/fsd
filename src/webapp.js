@@ -2,22 +2,23 @@ const webData = [
   {
     id: 1,
     header: "5-10",
-    text: "dňové sprinty"
+    text: "day sprints"
   },
   {
     id: 2,
     header: "<500ms",
-    text: "rýchlosť načítavania"
+    text: "loading speed"
   },
   {
     id: 3,
-    header: "3 hodiny",
-    text: "garancia zásahu"
+    header: "3 hours",
+    text: "response guarantee"
   },
   {
     id: 4,
-    header: "50€",
-    text: "hodinová sadzba"
+    header: "75€",
+    text: "hourly rate"
   }
-]
-export default webData
+];
+
+export default webData;

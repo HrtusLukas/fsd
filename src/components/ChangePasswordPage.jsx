@@ -33,7 +33,7 @@ const ChangePasswordPage = () => {
   
     setIsLoading(true);
     const token = localStorage.getItem('token');
-    const userId = JSON.parse(localStorage.getItem('user')).id; // Get the user ID from localStorage
+    const userId = JSON.parse(localStorage.getItem('user')).id; 
   
     try {
       const response = await fetch(`https://localhost:7039/api/Customer/changePassword`, {
@@ -43,7 +43,7 @@ const ChangePasswordPage = () => {
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          customerId: userId, // Pass the user ID
+          customerId: userId, 
           currentPassword: formData.currentPassword,
           newPassword: formData.newPassword,
         }),

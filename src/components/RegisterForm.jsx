@@ -12,6 +12,7 @@ const RegisterForm = () => {
     passwordRepeat: "",
     country: null,
     city: null,
+    imageUrl: "https://gvcgyihjqlielswxmrbw.supabase.co/storage/v1/object/sign/Images/default.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvZGVmYXVsdC5qcGciLCJpYXQiOjE3MzI4MTg4NjIsImV4cCI6MTc2NDM1NDg2Mn0.oag2OW_Oo8zKv5AeWcwXGoAVoKMnpyrkyHJj3OzT-nU&t=2024-11-28T18%3A34%3A21.427Z"
   });
 
   const handleChange = (e) => {
@@ -39,6 +40,7 @@ const RegisterForm = () => {
           password: formData.password,
           country: formData.country ? formData.country.label : "",
           city: formData.city ? formData.city.label : "",
+          imageUrl: "https://gvcgyihjqlielswxmrbw.supabase.co/storage/v1/object/sign/Images/default.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJbWFnZXMvZGVmYXVsdC5qcGciLCJpYXQiOjE3MzI4MTg4NjIsImV4cCI6MTc2NDM1NDg2Mn0.oag2OW_Oo8zKv5AeWcwXGoAVoKMnpyrkyHJj3OzT-nU&t=2024-11-28T18%3A34%3A21.427Z"
         }),
       });
 

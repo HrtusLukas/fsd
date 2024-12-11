@@ -19,14 +19,13 @@ const AboutUs = () => {
           </div>
           <div className="text-lg sm:text-xl font-bold mb-6 lg:mb-8">
             <p>
-              Naším hlavným zameraním sú úspešné e-shopy, mobilné a webové aplikácie na mieru.
+              Our main focus is on successful e-shops, mobile, and custom web applications.
             </p>
           </div>
           <div className="text-base sm:text-lg lg:text-xl mb-6 lg:mb-8">
             <p>
-              Vyvíjame štandardizovane svetovými technológiami, vďaka čomu dostávate garanciu
-              znovupoužiteľnosti vytvoreného kódu aplikácie, elimináciu vendor-lock rizika a
-              neobmedzené možnosti expanzie.
+              We develop with standardized world technologies, which guarantees you the reusability
+              of the created application code, elimination of vendor-lock risks, and unlimited expansion options.
             </p>
           </div>
         </div>
@@ -44,7 +43,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[50%] my-6 lg:mt-0 rounded-s-2xl  ">
+      <div className="w-full lg:w-[50%] my-6 lg:mt-0 rounded-s-2xl">
         <img src={image} className="w-full h-auto rounded-lg" alt="About us image" />
       </div>
     </div>

@@ -25,6 +25,10 @@ import Login from "./components/Login";
 import MyAccountPage from "./components/MyAccount";
 import EditProfile from "./components/EditProfile";
 import ChangePassword from "./components/ChangePassword";
+import Review from "./components/Review";
+import MakeOrder from "./components/MakeOrder";
+import OrderForm from "./components/OrderForm";
+import UploadImage from "./components/UploadImage";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -170,6 +174,33 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/account/reviews"
+            element={
+              <Review
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
+          <Route
+            path="/account/make-order"
+            element={
+              <MakeOrder
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          />
+          {/* <Route
+            path="/account/profile-picture"
+            element={
+              <UploadImage 
+                theme={theme}
+                toggleTheme={toggleTheme}
+              />
+            }
+          /> */}
         </Routes>
       </BrowserRouter>
       

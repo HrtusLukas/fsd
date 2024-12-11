@@ -12,7 +12,7 @@ import team8 from "../images/team8.jpg";
 const TeamPhoto = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Using your imported team images
+ 
   const teamMembers = [
     { image: team1, name: "Team Member 1" },
     { image: team2, name: "Team Member 2" },
@@ -34,7 +34,7 @@ const TeamPhoto = () => {
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
-  // Get the visible slides with wrap-around
+ 
   const getVisibleSlides = () => {
     const slides = [];
     for (let i = -1; i <= 1; i++) {
@@ -44,7 +44,7 @@ const TeamPhoto = () => {
     return slides;
   };
 
-  // Auto-advance slides every 3 seconds
+  
   React.useEffect(() => {
     const timer = setInterval(nextSlide, 3000);
     return () => clearInterval(timer);
@@ -52,7 +52,7 @@ const TeamPhoto = () => {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto px-4 py-8">
-      {/* Navigation buttons */}
+    
       <button 
         onClick={prevSlide}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
@@ -67,7 +67,7 @@ const TeamPhoto = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Carousel container */}
+    
       <div className="relative flex justify-center items-center gap-4 h-96">
         {getVisibleSlides().map((member, idx) => {
           const isCenter = member.position === 0;
@@ -85,7 +85,7 @@ const TeamPhoto = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  className="w-80 h-88 object-cover rounded-lg shadow-lg"
                 />
                 <div className={`
                   absolute bottom-0 left-0 right-0 
@@ -104,7 +104,7 @@ const TeamPhoto = () => {
         })}
       </div>
 
-      {/* Dots indicator */}
+     
       <div className="flex justify-center gap-2 mt-4">
         {teamMembers.map((_, idx) => (
           <button

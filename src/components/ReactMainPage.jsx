@@ -7,22 +7,22 @@ const ReactMainPage = () => {
       <section className="pt-[100px] w-[100vw] lg:w-[96.5vw] h-auto bg-transparent lg:mx-[20px] flex flex-col lg:flex-row">
         <div className="w-[100%] lg:w-[50%] flex flex-col text-primary mt-[5%] px-[5%] lg:px-[7%]">
           <div>
-            <p className="text-lg lg:text-xl">Webové aplikácie na platforme</p>
+            <p className="text-lg lg:text-xl">Web Applications on the Platform</p>
           </div>
           <div className="my-4">
             <h1 className="text-4xl lg:text-5xl">React</h1>
           </div>
           <div className="w-[100%] mb-3">
             <p className="text-[18px] lg:text-[22px] mb-4">
-              Vytvárajte moderné a dynamické webové stránky s Reactom, ktorý ponúka flexibilitu a efektivitu pre súčasné projekty.
+              Build modern and dynamic websites with React, offering flexibility and efficiency for today’s projects.
             </p>
             <p className="text-[14px] lg:text-[16px] mb-4">
-              React umožňuje vytvárať rýchle a interaktívne používateľské rozhrania, ktoré sú vhodné pre malé aj veľké projekty.
-              Vďaka vysokej výkonnosti a širokej podpore komponentov je ideálnou voľbou pre moderný vývoj webových aplikácií.
+              React enables fast and interactive user interfaces, suitable for projects both big and small. 
+              With high performance and a wide range of components, it is an ideal choice for modern web application development.
             </p>
             <p className="text-[14px] lg:text-[16px] mb-4">
-              Používame osvedčené postupy a komponenty na vytváranie efektívnych React aplikácií, ktoré sú ľahko udržiavateľné
-              a optimalizované pre rastúce podniky aj startupy.
+              We follow best practices and use proven components to create efficient React applications that are easy to maintain 
+              and optimized for growing businesses and startups alike.
             </p>
           </div>
         </div>

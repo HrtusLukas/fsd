@@ -15,7 +15,7 @@ const Header = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Function to check if the screen width is less than 768px
+  
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < 768);
   };
@@ -35,10 +35,10 @@ const Header = ({ theme, toggleTheme }) => {
     setVisibleId((prevId) => (prevId === id ? null : id));
   };
 
-  
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
 
   const handleRegistrationClick = () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
     if (isLoggedIn === 'true') {
       navigate('/account');
     } else {
@@ -166,7 +166,7 @@ const Header = ({ theme, toggleTheme }) => {
                   </li>
                   <li className="py-2">
                     <a onClick={handleRegistrationClick} className="text-primary text-xl cursor-pointer">
-                      Register
+                      {isLoggedIn ? "Login" : "Register"}
                     </a>
                   </li>
                 </ul>

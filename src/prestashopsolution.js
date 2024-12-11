@@ -1,39 +1,39 @@
 const prestashopsolution = [
   {
     id: 1,
-    header: "Prepojenie s ERP systémami",
-    text: "Automatizujte a zefektívnite prácu s e-shopom vďaka prepojeniu s ekonomickými a skladovými nástrojmi, ktoré vám zabezpečia aj tieto funkcie: okamžité synchronizované cenníky, skladové karty, varianty, súvisiace produkty, cenové skupiny, parametre produktov alebo stromovú kategorizáciu produktov. Časté skúsenosti máme s Money ERP, Pohoda, Softip, Abra, MKsoft, Profit365 a mnoho iných."
+    header: "Integration with ERP Systems",
+    text: "Automate and streamline e-commerce operations by integrating with ERP and inventory management tools, providing real-time updates on pricing, product attributes, inventory levels, and category structures. We commonly work with solutions like SAP, Oracle ERP, QuickBooks, NetSuite, and Dynamics 365.",
   },
   {
     id: 2,
-    header: "Online marketing a SEO",
-    text: "Či už nový e-shop, alebo obzvlášť prechod existujúceho e-shopu na naše riešenie, vyžaduje zvládnutú onPage SEO optimalizáciu, možnosť vytvoriť custom feedy, trackovanie pokročilých eventov do GTM cez datalayer, rich snippets, sociálne OG tagy a podporu pre marketingové kanály. Prechod na nový systém garantujeme ako bezproblémový z pohľadu vyhľadávačov."
+    header: "Digital Marketing and SEO Optimization",
+    text: "Launching a new online store or migrating an existing one to our platform includes thorough on-page SEO optimization, custom data feeds, advanced event tracking with GTM, structured data with rich snippets, and Open Graph support for social media. We ensure a smooth transition with no impact on search engine visibility.",
   },
   {
     id: 3,
-    header: "Automatizovaný Upsell a cross sell pomocou AI nástrojov",
-    text: "Pracujeme s veľkými e-shopmi, odkiaľ vieme že párovať manuálne tisíce produktov manuálne nie je niekedy možné. Automatizujeme odporúčané produkty pomocou AI nástrojov na základe histórie nákupov a aktuálneho správania sa zákazníkov."
+    header: "Automated Upselling and Cross-Selling with AI Tools",
+    text: "For large-scale stores, manually matching thousands of products is not feasible. We implement AI-driven product recommendations that analyze purchase history and current customer behavior, allowing for effective and personalized upselling and cross-selling.",
   },
   {
     id: 4,
-    header: "Integrácia dopravcov + automatická tlač štítkov pre kuriérov",
-    text: "Prestashop umožňuje jednoduché riadenie a správu doručovania objednávok. Po integrovaní pluginu konkrétneho dopravcu môžete nastaviť automatickú tlač štítkov pre kuriérov pri vytváraní objednávok. Viete si nastaviť pravidlá a preferencie týkajúce sa tlače štítkov, vrátane formátu štítku, jazyka a ďalších možností."
+    header: "Shipping Integrations + Automatic Label Printing",
+    text: "Our platform supports seamless shipping management by integrating with leading carriers. With specific plugins, you can automate label printing for orders and set preferences for label format, language, and additional options to simplify the fulfillment process.",
   },
   {
     id: 5,
-    header: "Efektívnejšia komunikácia so zákazníkmi (ticketing systém)",
-    text: "Integrovanie helpdesk riešenia priamo v systéme Prestashop môže byť užitočným krokom pre poskytovanie podpory zákazníkom, riešenie otázok a problémov, a zlepšenie celkovej zákazníckej skúsenosti vo vašom online obchode. Helpdesk riešenie vám umožní sledovať, spravovať a riešiť požiadavky zákazníkov z jedného centralizovaného miesta, v prepojení na objednávky a históriu zákazníka, na jeho reklamácie, faktúry, či dobropisy. To všetko na jednom mieste!"
+    header: "Enhanced Customer Support (Ticketing System)",
+    text: "Incorporate a helpdesk solution directly into your system to enhance customer support. This integration provides a centralized space to track and resolve customer inquiries, manage order-related questions, and handle returns, invoices, and refunds in one accessible location.",
   },
   {
     id: 6,
-    header: "Stabilita systému bez vendor-lock rizika",
-    text: "Vieme že svoj biznis chcete postaviť na platforme pri ktorej nehrozí riziko zaviazania sa jednotlivcom. Rešpektujeme a sami dodávame férovú NDA. Server optimalizujeme pre čo najvyšší výkon s načítaním e-shopu do 0,5 sekundy."
+    header: "System Stability without Vendor Lock-In",
+    text: "We understand the need to build a business on a secure platform without vendor lock-in risk. We offer fair NDAs and optimize server performance to ensure the fastest loading speeds, often under 0.5 seconds, for a reliable e-commerce experience.",
   },
   {
     id: 7,
-    header: "Integrácia platobných brán",
-    text: "Prestashop umožňuje integrovať všetky známe platobné brány. Pri výbere platobnej brány zohľadňujeme: rozsah platobných funkcií, poplatky, technické riešenie inline alebo redirectom, zoznam krajín kde sa bude predávať, konverzný pomer zahraničných platieb a dôveryhodnosť platobnej brány v danej krajine. Najčastejšie integrujeme Global Payments, GoPay, Stripe, Adyen, Paypal, a niekoľko ďalších."
+    header: "Payment Gateway Integration",
+    text: "Our platform supports integration with major payment gateways. We evaluate each gateway based on features, fees, inline vs. redirect options, country-specific compatibility, and conversion rates for international transactions. Common integrations include Stripe, Square, Adyen, PayPal, and more.",
   },
-]
+];
 
-export default prestashopsolution
+export default prestashopsolution;

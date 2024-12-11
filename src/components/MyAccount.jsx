@@ -25,7 +25,7 @@ const MyAccount = ({theme, toggleTheme}) => {
       const storedUser = localStorage.getItem('user');
 
       console.log(isLoggedIn)
-      // Update debug info
+
       setDebugInfo({
         isLoggedIn: isLoggedIn === 'true',
         hasToken: !!token,
@@ -41,20 +41,18 @@ const MyAccount = ({theme, toggleTheme}) => {
       try {
         if (storedUser) {
           const parsedUser = JSON.parse(storedUser);
-          // Format user data to match your needs
           const formattedUser = {
             id: parsedUser.id || parsedUser.Id,
             email: parsedUser.email || parsedUser.Email,
             firstName: parsedUser.firstName || parsedUser.FirstName,
             lastName: parsedUser.lastName || parsedUser.lastName,
             created: parsedUser.created || parsedUser.Created,
-            // Add any other fields you need to map
           };
           setUserData(formattedUser);
         }
       } catch (error) {
         console.error('Error parsing user data:', error);
-        localStorage.removeItem('user'); // Clear invalid data
+        localStorage.removeItem('user'); 
         navigate('/login');
       }
     };
@@ -63,7 +61,7 @@ const MyAccount = ({theme, toggleTheme}) => {
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.clear(); // Clear all localStorage items
+    localStorage.clear();
     navigate('/login');
   };
 
@@ -80,7 +78,7 @@ const MyAccount = ({theme, toggleTheme}) => {
     }
   };
 
-  // Debug view when user data is not available
+
   if (!userData) {
     return (
       <div className="pt-[100px] lg:w-[96.5vw] min-h-[90vh] bg-transparent my-[20px] mx-[20px] flex justify-center">
@@ -130,7 +128,7 @@ const MyAccount = ({theme, toggleTheme}) => {
     );
   }
 
-  // Main account view
+
   return (<>
   <Header theme={theme} toggleTheme={toggleTheme}/>
     <div className="pt-[100px] lg:w-[96.5vw] min-h-[90vh] bg-transparent my-[20px] mx-[20px] flex justify-center text-primary" >
@@ -204,9 +202,21 @@ const MyAccount = ({theme, toggleTheme}) => {
                   </button>
                   <button
                     className="border border-primary px-4 py-2 rounded-lg w-full text-left hover:bg-secondary hover:text-white transition-colors duration-300"
-                    onClick={() => navigate('/account/preferences')}
+                    onClick={() => navigate('/account/make-order')}
                   >
-                    Update Preferences
+                    Make a Order
+                  </button>
+                  <button
+                    className="border border-primary px-4 py-2 rounded-lg w-full text-left hover:bg-secondary hover:text-white transition-colors duration-300"
+                    onClick={() => navigate('/account/reviews')}
+                  >
+                    Write a review
+                  </button>
+                  <button
+                    className="border border-primary px-4 py-2 rounded-lg w-full text-left hover:bg-secondary hover:text-white transition-colors duration-300"
+                    onClick={() => navigate('/account/profile-picture')}
+                  >
+                    Change a profile picture
                   </button>
                 </div>
               </section>

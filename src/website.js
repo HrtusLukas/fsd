@@ -1,23 +1,24 @@
 const websiteData = [
   {
     id: 1,
-    header: "1900€",
-    text: "cena už od"
+    header: "€1900",
+    text: "starting price",
   },
   {
     id: 2,
-    header: "od 9€",
-    text: "mesačné náklady"
+    header: "from €9",
+    text: "monthly cost",
   },
   {
     id: 3,
-    header: "1 mesiac",
-    text: "doba dodania"
+    header: "1 month",
+    text: "delivery time",
   },
   {
     id: 4,
     header: "TOP 1",
-    text: "obľúbená platforma"
-  }
-]
-export default websiteData
+    text: "favorite platform",
+  },
+];
+
+export default websiteData;

@@ -5,19 +5,19 @@ import { useRef, useState, useEffect } from "react";
 const Financing = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Function to check if the screen width is less than 768px
+
   const checkScreenSize = () => {
     setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {
-    // Initial check
+
     checkScreenSize();
 
-    // Add event listener for screen resize
+   
     window.addEventListener("resize", checkScreenSize);
 
-    // Cleanup event listener
+   
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
@@ -44,7 +44,7 @@ const Financing = () => {
               ref={ref}
               style={
                 isMobile
-                  ? {} // No animations on mobile
+                  ? {} 
                   : {
                       scale: scaleProgress,
                       opacity: opacityProgress,

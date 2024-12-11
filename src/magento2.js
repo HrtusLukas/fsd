@@ -2,22 +2,23 @@ const magento2Data = [
   {
     id: 1,
     header: "6490€",
-    text: "cena už od"
+    text: "starting price from"
   },
   {
     id: 2,
     header: "80€",
-    text: "mesačné náklady"
+    text: "monthly costs"
   },
   {
     id: 3,
-    header: "2 mesiace",
-    text: "doba dodania od"
+    header: "2 months",
+    text: "delivery time from"
   },
   {
     id: 4,
-    header: "v TOP 3",
-    text: "ecommerce platforma"
+    header: "in the TOP 3",
+    text: "ecommerce platforms"
   }
-]
-export default magento2Data
+];
+
+export default magento2Data;
